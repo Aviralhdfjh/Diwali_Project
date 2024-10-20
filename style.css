@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Sacramento');
 
-/* General Body Styling */
 body {
     margin: 0;
     padding: 0;
@@ -14,7 +13,7 @@ body {
     overflow: hidden;
 }
 
-/* Container Styling */
+
 .container {
     text-align: center;
     padding: 20px;
@@ -22,7 +21,7 @@ body {
     max-width: 900px;
 }
 
-/* Title Styling */
+
 .title {
     font-size: 8vw;
     color: #ffcc00;
@@ -30,7 +29,7 @@ body {
     margin-bottom: 50px;
 }
 
-/* Fireworks Styling */
+
 .fireworks {
     display: flex;
     justify-content: center;
@@ -83,7 +82,7 @@ body {
     animation: sparkle 0.5s ease-in-out infinite;
 }
 
-/* Firework Animation */
+
 @keyframes explode {
     0%, 100% {
         transform: scale(1);
@@ -104,7 +103,7 @@ body {
     }
 }
 
-/* Responsive Styling */
+
 @media (max-width: 768px) {
     .title {
         font-size: 10vw;
