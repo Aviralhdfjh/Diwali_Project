@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css?family=Sacramento');
+
+/* General Body Styling */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Sacramento', cursive;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #1c1c1c;
+    color: #fff;
+    overflow: hidden;
+}
+
+/* Container Styling */
+.container {
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+    max-width: 900px;
+}
+
+/* Title Styling */
+.title {
+    font-size: 8vw;
+    color: #ffcc00;
+    text-shadow: 0 0 10px rgba(255, 165, 0, 0.7), 0 0 20px rgba(255, 69, 0, 0.7);
+    margin-bottom: 50px;
+}
+
+/* Fireworks Styling */
+.fireworks {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.fireworks li {
+    margin: 15px;
+    height: 80px;
+    width: 80px;
+    background: radial-gradient(circle at 50% 50%, #ff6f61, #ffcc00);
+    border-radius: 50%;
+    position: relative;
+    animation: explode 2s ease-in-out infinite;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+}
+
+.fireworks li::before,
+.fireworks li::after {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    background: inherit;
+    opacity: 0.7;
+    animation: explode 2s ease-in-out infinite;
+}
+
+.fireworks li::before {
+    transform: scale(1.2);
+}
+
+.fireworks li::after {
+    transform: scale(0.8);
+}
+
+.fireworks li span {
+    display: block;
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: sparkle 0.5s ease-in-out infinite;
+}
+
+/* Firework Animation */
+@keyframes explode {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.5);
+        opacity: 0.5;
+    }
+}
+
+@keyframes sparkle {
+    0%, 100% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+    50% {
+        transform: translate(-50%, -50%) scale(1.5);
+    }
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .title {
+        font-size: 10vw;
+    }
+
+    .fireworks li {
+        height: 60px;
+        width: 60px;
+    }
+}
+
+@media (max-width: 480px) {
+    .title {
+        font-size: 12vw;
+    }
+
+    .fireworks li {
+        height: 50px;
+        width: 50px;
+    }
+}
